@@ -14,7 +14,7 @@ interface Props {
 function Row({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <div className="cv-section grid grid-cols-[120px_1fr] gap-x-8 sm:grid-cols-[140px_1fr]">
-      <span className="section-label mt-0.5">{label}</span>
+      <span className="section-label mt-0.5" style={{ color: 'var(--fg)', fontWeight: 700 }}>{label}</span>
       <div>{children}</div>
     </div>
   )
@@ -30,12 +30,12 @@ export default function CV({ lang, setLang, dark, toggleDark }: Props) {
   const d = t[lang]
 
   return (
-    <div style={{ background: 'var(--bg)', minHeight: '100vh' }}>
+    <div style={{ background: 'var(--page-bg)', minHeight: '100vh' }}>
       {/* ── toolbar (not printed) ── */}
       <div
         className="no-print sticky top-0 z-50 flex items-center justify-between px-6 py-2.5 border-b"
         style={{
-          background: 'var(--bg)',
+          background: 'var(--bg-toolbar)',
           borderColor: 'var(--border)',
           backdropFilter: 'blur(8px)',
         }}
@@ -122,32 +122,23 @@ export default function CV({ lang, setLang, dark, toggleDark }: Props) {
 
       {/* ── CV body ── */}
       <div
-        className="cv-wrapper mx-auto px-6 py-10"
-        style={{ maxWidth: '820px' }}
+        className="cv-wrapper mx-auto px-8 py-10"
+        style={{
+          maxWidth: '820px',
+          marginTop: '28px',
+          marginBottom: '28px',
+          background: 'var(--bg)',
+          border: '1px solid var(--border)',
+          borderRadius: '14px',
+          boxShadow: '0 24px 60px -24px rgba(0, 0, 0, 0.45)',
+        }}
       >
 
         {/* ══ HEADER ══════════════════════════════════════════════ */}
         <div className="flex items-start gap-6 mb-8">
           {/* Photo */}
-          <div
-            style={{
-              width: '72px',
-              height: '72px',
-              borderRadius: '4px',
-              overflow: 'hidden',
-              flexShrink: 0,
-              border: '1px solid var(--border)',
-              background: 'var(--border)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              color: 'var(--fg-faint)',
-              fontSize: '11px',
-              fontFamily: 'IBM Plex Mono, monospace',
-            }}
-          >
-            {/* Replace <img> src with your actual photo path */}
-            <span>MO</span>
+          <div style={{ width: '150px', height: '150px', borderRadius: '6px', overflow: 'hidden', flexShrink: 0, border: '1px solid var(--border)' }}>
+            <img src="/oukhajou.jpeg" alt="Mohamed Oukhajou" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
           </div>
 
           {/* Name + title + contacts */}
@@ -155,10 +146,10 @@ export default function CV({ lang, setLang, dark, toggleDark }: Props) {
             <h1
               style={{
                 fontFamily: 'IBM Plex Sans, sans-serif',
-                fontSize: '22px',
+                fontSize: '28px',
                 fontWeight: 600,
                 letterSpacing: '-0.01em',
-                color: 'var(--fg)',
+                color: '#ffffff',
                 lineHeight: 1.2,
                 marginBottom: '2px',
               }}
@@ -167,7 +158,7 @@ export default function CV({ lang, setLang, dark, toggleDark }: Props) {
             </h1>
             <p
               style={{
-                fontSize: '13px',
+                fontSize: '14px',
                 color: 'var(--fg-muted)',
                 fontWeight: 400,
                 marginBottom: '10px',
@@ -179,7 +170,7 @@ export default function CV({ lang, setLang, dark, toggleDark }: Props) {
             {/* Contact row */}
             <div
               className="flex flex-wrap gap-x-5 gap-y-1"
-              style={{ fontSize: '12px', color: 'var(--fg-muted)' }}
+              style={{ fontSize: '13px', color: 'var(--fg-muted)' }}
             >
               <ContactItem icon={<Mail size={11} />} href={`mailto:${d.email}`} label={d.email} />
               <ContactItem icon={<Phone size={11} />} label={d.phone} />
@@ -194,7 +185,7 @@ export default function CV({ lang, setLang, dark, toggleDark }: Props) {
 
         {/* ══ PROFILE ═════════════════════════════════════════════ */}
         <Row label={d.profile.label}>
-          <p style={{ color: 'var(--fg-muted)', lineHeight: 1.65 }}>{d.profile.text}</p>
+          <p style={{ color: 'var(--fg-muted)', fontSize: '15.5px', lineHeight: 1.65 }}>{d.profile.text}</p>
         </Row>
 
         {/* ══ EXPERIENCE ══════════════════════════════════════════ */}
@@ -208,7 +199,7 @@ export default function CV({ lang, setLang, dark, toggleDark }: Props) {
                     <span
                       style={{
                         fontWeight: 600,
-                        fontSize: '13.5px',
+                        fontSize: '14.5px',
                         color: 'var(--fg)',
                       }}
                     >
@@ -223,13 +214,13 @@ export default function CV({ lang, setLang, dark, toggleDark }: Props) {
                     >
                       —
                     </span>
-                    <span style={{ color: 'var(--fg-muted)', fontStyle: 'italic', fontSize: '13px' }}>
+                    <span style={{ color: 'var(--fg-muted)', fontStyle: 'italic', fontSize: '14px' }}>
                       {job.role}
                     </span>
                   </div>
                   <span
+                    className="period"
                     style={{
-                      fontSize: '11.5px',
                       color: 'var(--fg-faint)',
                       fontFamily: 'IBM Plex Mono, monospace',
                       whiteSpace: 'nowrap',
@@ -242,7 +233,7 @@ export default function CV({ lang, setLang, dark, toggleDark }: Props) {
                 {/* Location */}
                 <p
                   style={{
-                    fontSize: '11.5px',
+                    fontSize: '12.5px',
                     color: 'var(--fg-faint)',
                     marginTop: '1px',
                     marginBottom: '6px',
@@ -258,7 +249,8 @@ export default function CV({ lang, setLang, dark, toggleDark }: Props) {
                       key={j}
                       style={{
                         color: 'var(--fg-muted)',
-                        lineHeight: 1.6,
+                        fontSize: '15.5px',
+                        lineHeight: 1.7,
                         marginBottom: '2px',
                         paddingLeft: '2px',
                       }}
@@ -270,9 +262,9 @@ export default function CV({ lang, setLang, dark, toggleDark }: Props) {
 
                 {/* Stack */}
                 <p
+                  className="stack-line"
                   style={{
                     marginTop: '6px',
-                    fontSize: '11.5px',
                     color: 'var(--fg-faint)',
                     fontFamily: 'IBM Plex Mono, monospace',
                   }}
@@ -295,12 +287,12 @@ export default function CV({ lang, setLang, dark, toggleDark }: Props) {
             {d.education.items.map((edu, i) => (
               <div key={i}>
                 <div className="flex items-baseline justify-between gap-4 flex-wrap">
-                  <span style={{ fontWeight: 600, fontSize: '13.5px', color: 'var(--fg)' }}>
+                  <span style={{ fontWeight: 600, fontSize: '14.5px', color: 'var(--fg)' }}>
                     {edu.institution}
                   </span>
                   <span
+                    className="period"
                     style={{
-                      fontSize: '11.5px',
                       color: 'var(--fg-faint)',
                       fontFamily: 'IBM Plex Mono, monospace',
                       whiteSpace: 'nowrap',
@@ -309,9 +301,9 @@ export default function CV({ lang, setLang, dark, toggleDark }: Props) {
                     {edu.period}
                   </span>
                 </div>
-                <p style={{ color: 'var(--fg-muted)', fontStyle: 'italic', fontSize: '13px' }}>{edu.degree}</p>
+                <p style={{ color: 'var(--fg-muted)', fontStyle: 'italic', fontSize: '14px' }}>{edu.degree}</p>
                 {edu.note && (
-                  <p style={{ fontSize: '12px', color: 'var(--fg-faint)', marginTop: '2px' }}>{edu.note}</p>
+                  <p style={{ fontSize: '13px', color: 'var(--fg-faint)', marginTop: '2px' }}>{edu.note}</p>
                 )}
               </div>
             ))}
@@ -324,10 +316,10 @@ export default function CV({ lang, setLang, dark, toggleDark }: Props) {
             {d.projects.items.map((proj, i) => (
               <div key={i}>
                 <div className="flex items-baseline justify-between gap-4 flex-wrap">
-                  <span style={{ fontWeight: 600, fontSize: '13.5px', color: 'var(--fg)' }}>{proj.name}</span>
+                  <span style={{ fontWeight: 600, fontSize: '14.5px', color: 'var(--fg)' }}>{proj.name}</span>
                   <span
+                    className="period"
                     style={{
-                      fontSize: '11.5px',
                       color: 'var(--fg-faint)',
                       fontFamily: 'IBM Plex Mono, monospace',
                       whiteSpace: 'nowrap',
@@ -338,9 +330,9 @@ export default function CV({ lang, setLang, dark, toggleDark }: Props) {
                 </div>
                 <p style={{ color: 'var(--fg-muted)', lineHeight: 1.6, marginTop: '2px' }}>{proj.desc}</p>
                 <p
+                  className="stack-line"
                   style={{
                     marginTop: '4px',
-                    fontSize: '11.5px',
                     color: 'var(--fg-faint)',
                     fontFamily: 'IBM Plex Mono, monospace',
                   }}
@@ -359,10 +351,10 @@ export default function CV({ lang, setLang, dark, toggleDark }: Props) {
               <div key={g.label} className="flex gap-3 flex-wrap">
                 <span
                   style={{
-                    fontSize: '11px',
+                    fontSize: '12px',
                     fontFamily: 'IBM Plex Mono, monospace',
                     fontWeight: 600,
-                    color: 'var(--fg-faint)',
+                    color: 'var(--fg)',
                     letterSpacing: '0.06em',
                     textTransform: 'uppercase',
                     minWidth: '70px',

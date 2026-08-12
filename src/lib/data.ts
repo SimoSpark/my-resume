@@ -12,7 +12,7 @@ export const t = {
 
     profile: {
       label: 'Profile',
-      text: 'Computer Engineering graduate (DUT) passionate about web development and modern technologies. Experienced in building full-stack web applications with React, Next.js ,and Spring Boot. Collaborative team player with a strong sense of ownership, currently seeking a full-stack internship of 4 months or more.',
+      text: 'Computer Engineering graduate (DUT) with hands-on experience in full-stack web development using React, Next.js, PHP and Spring Boot. Currently seeking an Ausbildung opportunity in Germany to deepen my technical skills and contribute to innovative projects. German level B1 (OSD Certificate).',
     },
 
     experience: {
@@ -78,7 +78,7 @@ export const t = {
         { label: 'Backend', items: 'PHP, Spring Boot, Java, Node.js, REST APIs' },
         { label: 'Database', items: 'MySQL, PostgreSQL, PL/SQL' },
         { label: 'Tools', items: 'Git, GitHub, GitLab, Figma, UML, Linux, VS Code, IntelliJ IDEA, Android Studio' },
-        { label: 'Languages', items: 'Tamazight (Native), Arabic (Native), French (Professional), English (Professional), German (Intermediate)' },
+        { label: 'Languages', items: 'Tamazight (Native), Arabic (Native), French (C1), English (B2), German (B1 — OSD Certificate)' },
       ],
     },
 
@@ -91,12 +91,7 @@ export const t = {
           desc: 'Centralised web application for booking appointments across healthcare, education and home services. Intuitive interface with full user and service management.',
           stack: 'React.js · Next.js · TailwindCSS · Hygraph · Descope',
         },
-        {
-          name: 'GitHub Portfolio',
-          period: 'Ongoing',
-          desc: 'Over 20 public repositories covering full-stack applications, UI components and academic projects.',
-          stack: 'github.com/SimoSpark',
-        },
+       
       ],
     },
 
@@ -117,7 +112,7 @@ export const t = {
 
     profile: {
       label: 'Profil',
-      text: 'Absolvent der Informatikingenieurwissenschaften (DUT) mit Leidenschaft für Webentwicklung und moderne Technologien. Erfahrung in der Entwicklung vollständiger Webanwendungen mit React, Next.js, PHP und Spring Boot. Teamorientierter Entwickler mit ausgeprägtem Verantwortungsbewusstsein, aktuell auf der Suche nach einem Full-Stack-Praktikum ab 4 Monaten.',
+      text: 'Absolvent der Informatikingenieurwissenschaften (DUT) mit praktischer Erfahrung in der Full-Stack-Webentwicklung mit React, Next.js, PHP und Spring Boot. Ich suche aktuell eine Ausbildungsstelle in Deutschland, um meine technischen Fähigkeiten weiterzuentwickeln und an innovativen Projekten mitzuwirken. Deutschkenntnisse: B1 (OSD-Zertifikat).',
     },
 
     experience: {
@@ -171,7 +166,7 @@ export const t = {
           institution: 'Lycée Tarik Ibn Ziad',
           degree: 'Abitur, Physikalische Wissenschaften — Französische Option',
           period: '2022',
-          note: 'Abschluss mit Auszeichnung (Mention Bien)',
+          note: 'Abschluss mit Auszeichnung (Gesamtnote: Gut)',
         },
       ],
     },
@@ -183,7 +178,7 @@ export const t = {
         { label: 'Backend', items: 'PHP, Spring Boot, Java, Node.js, REST APIs' },
         { label: 'Datenbank', items: 'MySQL, PostgreSQL, PL/SQL' },
         { label: 'Tools', items: 'Git, GitHub, GitLab, Figma, UML, Linux, VS Code, IntelliJ IDEA, Android Studio' },
-        { label: 'Sprachen', items: 'Tamazight (Muttersprache), Arabisch (Muttersprache), Französisch (Beruflich), Englisch (Beruflich), Deutsch (Mittelstufe)' },
+        { label: 'Sprachen', items: 'Tamazight (Muttersprache), Arabisch (Muttersprache), Französisch (C1), Englisch (B2), Deutsch (B1 — OSD-Zertifikat)' },
       ],
     },
 
@@ -196,12 +191,7 @@ export const t = {
           desc: 'Zentralisierte Webanwendung zur Terminbuchung in den Bereichen Gesundheit, Bildung und Haushaltsdienstleistungen. Intuitive Oberfläche mit vollständiger Benutzer- und Dienstverwaltung.',
           stack: 'React.js · Next.js · TailwindCSS · Hygraph · Descope',
         },
-        {
-          name: 'GitHub Portfolio',
-          period: 'Laufend',
-          desc: 'Über 20 öffentliche Repositories mit Full-Stack-Anwendungen, UI-Komponenten und akademischen Projekten.',
-          stack: 'github.com/SimoSpark',
-        },
+        
       ],
     },
 

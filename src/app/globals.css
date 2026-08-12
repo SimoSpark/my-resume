@@ -5,6 +5,7 @@
 @tailwind utilities;
 
 :root {
+  --page-bg: #ffffff;
   --bg: #ffffff;
   --fg: #111111;
   --fg-muted: #555555;
@@ -15,12 +16,17 @@
 }
 
 .dark {
-  --bg: #111111;
-  --fg: #e8e8e8;
-  --fg-muted: #aaaaaa;
-  --fg-faint: #666666;
-  --border: #2a2a2a;
-  --accent: #5c8fef;
+  --page-bg: #0b0e16;
+  --bg: #161d2c;
+  --fg: #f8fafc;
+  --fg-sec: #e2e8f0;
+  --fg-muted: #a8b3c7;
+  --fg-faint: #7c8aa3;
+  --border: #232b3d;
+  --border-mid: #2e3750;
+  --accent: #60a5fa;
+  --accent-hover: #93c5fd;
+  --bg-toolbar: rgba(11, 14, 22, 0.95);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -28,10 +34,10 @@
 html { scroll-behavior: smooth; }
 
 body {
-  background: var(--bg);
+  background: var(--page-bg);
   color: var(--fg);
   font-family: 'IBM Plex Sans', system-ui, sans-serif;
-  font-size: 13.5px;
+  font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   transition: background 0.2s, color 0.2s;
@@ -52,13 +58,21 @@ a:hover { text-decoration: underline; }
 
 /* Section label (left column) */
 .section-label {
-  font-size: 10.5px;
+  font-size: 12.5px;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--fg-faint);
   font-family: 'IBM Plex Mono', monospace;
   padding-top: 2px;
+}
+
+.period {
+  font-size: 13.5px;
+}
+
+.stack-line {
+  font-size: 13.5px;
 }
 
 /* Print */
