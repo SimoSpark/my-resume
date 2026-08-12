@@ -6,7 +6,7 @@ export const t = {
     phone: '+212 671 599 936',
     email: 'mohamedoukhajou@gmail.com',
     github: 'github.com/SimoSpark',
-    linkedin: 'linkedin.com/in/Mohamed-OUKHAJOU',
+    linkedin: 'linkedin.com/in/mohamed-oukhajou-9183a8295',
     location: 'Agadir, Morocco',
     available: 'Open to internship opportunities',
 
@@ -106,7 +106,7 @@ export const t = {
     phone: '+212 671 599 936',
     email: 'mohamedoukhajou@gmail.com',
     github: 'github.com/SimoSpark',
-    linkedin: 'linkedin.com/in/Mohamed-OUKHAJOU',
+    linkedin: 'linkedin.com/in/mohamed-oukhajou-9183a8295',
     location: 'Agadir, Marokko',
     available: 'Offen für Praktikumsangebote',
 
