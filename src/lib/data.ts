@@ -12,7 +12,7 @@ export const t = {
 
     profile: {
       label: 'Profile',
-      text: 'Computer Engineering graduate (DUT) with hands-on experience in full-stack web development using React, Next.js, PHP and Spring Boot. Currently seeking an Ausbildung opportunity in Germany to deepen my technical skills and contribute to innovative projects. German level B1 (OSD Certificate).',
+      text: 'Computer Engineering graduate (DUT) with practical experience in full-stack web development gained through internships and real-world projects. Skilled in React, Next.js and TypeScript, with hands-on experience working with PostgreSQL and MySQL. Interested in modern web technologies and AI-powered applications, with a strong focus on building and understanding modern software systems.',
     },
 
     experience: {
@@ -78,7 +78,7 @@ export const t = {
         { label: 'Backend', items: 'PHP, Spring Boot, Java, Node.js, REST APIs' },
         { label: 'Database', items: 'MySQL, PostgreSQL, PL/SQL' },
         { label: 'Tools', items: 'Git, GitHub, GitLab, Figma, UML, Linux, VS Code, IntelliJ IDEA, Android Studio' },
-        { label: 'Languages', items: 'Tamazight (Native), Arabic (Native), French (C1), English (B2), German (B1 — OSD Certificate)' },
+        { label: 'Languages', items: 'Tamazight (Native), Arabic (Native), French (Professional), English (Professional), German (Intermediate — B1, OSD Certificate)' },
       ],
     },
 
@@ -112,7 +112,7 @@ export const t = {
 
     profile: {
       label: 'Profil',
-      text: 'Absolvent der Informatikingenieurwissenschaften (DUT) mit praktischer Erfahrung in der Full-Stack-Webentwicklung mit React, Next.js, PHP und Spring Boot. Ich suche aktuell eine Ausbildungsstelle in Deutschland, um meine technischen Fähigkeiten weiterzuentwickeln und an innovativen Projekten mitzuwirken. Deutschkenntnisse: B1 (OSD-Zertifikat).',
+      text: 'Absolvent eines DUT-Studiengangs im Bereich Informatik mit praktischer Erfahrung in der Full-Stack-Webentwicklung, gesammelt durch Praktika und praxisnahe Projekte. Erfahren im Umgang mit React, Next.js und TypeScript sowie mit PostgreSQL und MySQL. Interessiert an modernen Webtechnologien und KI-gestützten Anwendungen, mit einem starken Fokus auf die Entwicklung und das Verständnis moderner Softwaresysteme.',
     },
 
     experience: {
@@ -178,7 +178,7 @@ export const t = {
         { label: 'Backend', items: 'PHP, Spring Boot, Java, Node.js, REST APIs' },
         { label: 'Datenbank', items: 'MySQL, PostgreSQL, PL/SQL' },
         { label: 'Tools', items: 'Git, GitHub, GitLab, Figma, UML, Linux, VS Code, IntelliJ IDEA, Android Studio' },
-        { label: 'Sprachen', items: 'Tamazight (Muttersprache), Arabisch (Muttersprache), Französisch (C1), Englisch (B2), Deutsch (B1 — OSD-Zertifikat)' },
+        { label: 'Sprachen', items: 'Tamazight (Muttersprache), Arabisch (Muttersprache), Französisch (Verhandlungssicher), Englisch (Verhandlungssicher), Deutsch (Mittelstufe — B1, OSD-Zertifikat)' },
       ],
     },
 

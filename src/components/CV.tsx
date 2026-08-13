@@ -1,6 +1,8 @@
 'use client'
+import Image from 'next/image'
 import { Lang, t } from '@/lib/data'
 import { Mail, Github, Linkedin, Phone, MapPin, Moon, Sun, Download, Globe } from 'lucide-react'
+import CommandMenu from './CommandMenu'
 
 interface Props {
   lang: Lang
@@ -48,10 +50,31 @@ export default function CV({ lang, setLang, dark, toggleDark }: Props) {
             letterSpacing: '0.05em',
           }}
         >
-          Mohamed Oukhajou · CV
+          Mohamed Oukhajou · Resume
         </span>
 
         <div className="flex items-center gap-2">
+          {/* Command menu trigger */}
+          <button
+            onClick={() => window.dispatchEvent(new Event('open-command-menu'))}
+            style={{
+              padding: '4px 8px',
+              background: 'transparent',
+              border: '1px solid var(--border)',
+              borderRadius: '4px',
+              cursor: 'pointer',
+              color: 'var(--fg-faint)',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '5px',
+              fontSize: '11px',
+              fontFamily: 'IBM Plex Mono, monospace',
+            }}
+            title="Open command menu"
+          >
+            Ctrl+J
+          </button>
+
           {/* Language */}
           <div
             className="flex items-center rounded overflow-hidden"
@@ -137,8 +160,15 @@ export default function CV({ lang, setLang, dark, toggleDark }: Props) {
         {/* ══ HEADER ══════════════════════════════════════════════ */}
         <div className="flex items-start gap-6 mb-8">
           {/* Photo */}
-          <div style={{ width: '150px', height: '150px', borderRadius: '6px', overflow: 'hidden', flexShrink: 0, border: '1px solid var(--border)' }}>
-            <img src="/oukhajou.jpeg" alt="Mohamed Oukhajou" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+          <div style={{ width: '190px', height: '190px', borderRadius: '6px', overflow: 'hidden', flexShrink: 0, border: '1px solid var(--border)' }}>
+            <Image
+              src="/oukhajou.jpeg"
+              alt="Mohamed Oukhajou"
+              width={190}
+              height={190}
+              priority
+              style={{ objectFit: 'cover', display: 'block', width: '100%', height: '100%' }}
+            />
           </div>
 
           {/* Name + title + contacts */}
@@ -375,6 +405,8 @@ export default function CV({ lang, setLang, dark, toggleDark }: Props) {
         </Row>
 
       </div>
+
+      <CommandMenu lang={lang} setLang={setLang} dark={dark} toggleDark={toggleDark} />
     </div>
   )
 }
