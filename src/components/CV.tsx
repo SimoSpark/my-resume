@@ -54,27 +54,6 @@ export default function CV({ lang, setLang, dark, toggleDark }: Props) {
         </span>
 
         <div className="flex items-center gap-2">
-          {/* Command menu trigger */}
-          <button
-            onClick={() => window.dispatchEvent(new Event('open-command-menu'))}
-            style={{
-              padding: '4px 8px',
-              background: 'transparent',
-              border: '1px solid var(--border)',
-              borderRadius: '4px',
-              cursor: 'pointer',
-              color: 'var(--fg-faint)',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '5px',
-              fontSize: '11px',
-              fontFamily: 'IBM Plex Mono, monospace',
-            }}
-            title="Open command menu"
-          >
-            Ctrl+J
-          </button>
-
           {/* Language */}
           <div
             className="flex items-center rounded overflow-hidden"
@@ -147,7 +126,7 @@ export default function CV({ lang, setLang, dark, toggleDark }: Props) {
       <div
         className="cv-wrapper mx-auto px-8 py-10"
         style={{
-          maxWidth: '820px',
+          maxWidth: '896px',
           marginTop: '28px',
           marginBottom: '28px',
           background: 'var(--bg)',
@@ -172,7 +151,7 @@ export default function CV({ lang, setLang, dark, toggleDark }: Props) {
           </div>
 
           {/* Name + title + contacts */}
-          <div className="flex-1 min-w-0">
+          <div className="flex-1 min-w-0" style={{ paddingTop: '16px' }}>
             <h1
               style={{
                 fontFamily: 'IBM Plex Sans, sans-serif',
@@ -346,7 +325,25 @@ export default function CV({ lang, setLang, dark, toggleDark }: Props) {
             {d.projects.items.map((proj, i) => (
               <div key={i}>
                 <div className="flex items-baseline justify-between gap-4 flex-wrap">
-                  <span style={{ fontWeight: 600, fontSize: '14.5px', color: 'var(--fg)' }}>{proj.name}</span>
+                  {proj.url ? (
+                    <a
+                      href={proj.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        fontWeight: 600,
+                        fontSize: '14.5px',
+                        color: 'var(--fg)',
+                        textDecoration: 'none',
+                      }}
+                      onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = 'var(--accent)')}
+                      onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = 'var(--fg)')}
+                    >
+                      {proj.name}
+                    </a>
+                  ) : (
+                    <span style={{ fontWeight: 600, fontSize: '14.5px', color: 'var(--fg)' }}>{proj.name}</span>
+                  )}
                   <span
                     className="period"
                     style={{
@@ -405,6 +402,28 @@ export default function CV({ lang, setLang, dark, toggleDark }: Props) {
         </Row>
 
       </div>
+
+      {/* Command menu hint (informational only */}
+      <p
+        className="no-print"
+        style={{
+          position: 'fixed',
+          left: '50%',
+          bottom: '16px',
+          transform: 'translateX(-50%)',
+          zIndex: 40,
+          pointerEvents: 'none',
+          textAlign: 'center',
+          fontSize: '15.5px',
+          color: 'var(--fg-muted)',
+          fontFamily: 'IBM Plex Mono, monospace',
+          textShadow: '0 1px 3px rgba(0, 0, 0, 0.25)',
+          userSelect: 'none',
+          whiteSpace: 'nowrap',
+        }}
+      >
+        Press <span style={{ fontWeight: 400, color: 'var(--fg)' }}>Ctrl+J</span> to open the command menu
+      </p>
 
       <CommandMenu lang={lang} setLang={setLang} dark={dark} toggleDark={toggleDark} />
     </div>

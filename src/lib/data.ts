@@ -7,7 +7,7 @@ export const t = {
     email: 'mohamedoukhajou@gmail.com',
     github: 'github.com/SimoSpark',
     linkedin: 'linkedin.com/in/mohamed-oukhajou-9183a8295',
-    location: 'Agadir, Morocco',
+    location: 'Kelaat M\'Gouna, Morocco',
     available: 'Open to internship opportunities',
 
     profile: {
@@ -86,12 +86,19 @@ export const t = {
       label: 'Projects',
       items: [
         {
+          name: 'Triply',
+          period: 'Jan 2026',
+          desc: 'Modern frontend travel planning application for discovering destinations and organising travel ideas, built with a focus on responsive UI, reusable React components and interactive user experiences.',
+          stack: 'React.js · Next.js · TypeScript · Tailwind CSS · Framer Motion',
+          url: 'https://triply-six-red.vercel.app/',
+        },
+        {
           name: 'Appointment Platform (PFE)',
           period: 'Dec 2024 – Mar 2025',
           desc: 'Centralised web application for booking appointments across healthcare, education and home services. Intuitive interface with full user and service management.',
           stack: 'React.js · Next.js · TailwindCSS · Hygraph · Descope',
+          url: 'https://final-project-estg-r8n8.vercel.app/',
         },
-       
       ],
     },
 
@@ -107,7 +114,7 @@ export const t = {
     email: 'mohamedoukhajou@gmail.com',
     github: 'github.com/SimoSpark',
     linkedin: 'linkedin.com/in/mohamed-oukhajou-9183a8295',
-    location: 'Agadir, Marokko',
+    location: 'Kelaat M\'Gouna, Marokko',
     available: 'Offen für Praktikumsangebote',
 
     profile: {
@@ -186,12 +193,19 @@ export const t = {
       label: 'Projekte',
       items: [
         {
+          name: 'Triply',
+          period: 'Jan 2026',
+          desc: 'Moderne Frontend-Anwendung zur Reiseplanung für das Entdecken von Reisezielen und das Organisieren von Reiseideen, mit Fokus auf responsives UI, wiederverwendbare React-Komponenten und interaktive Nutzererlebnisse.',
+          stack: 'React.js · Next.js · TypeScript · Tailwind CSS · Framer Motion',
+          url: 'https://triply-six-red.vercel.app/',
+        },
+        {
           name: 'Terminbuchungsplattform (PFE)',
           period: 'Dez 2024 – Mär 2025',
           desc: 'Zentralisierte Webanwendung zur Terminbuchung in den Bereichen Gesundheit, Bildung und Haushaltsdienstleistungen. Intuitive Oberfläche mit vollständiger Benutzer- und Dienstverwaltung.',
           stack: 'React.js · Next.js · TailwindCSS · Hygraph · Descope',
+          url: 'https://final-project-estg-r8n8.vercel.app/',
         },
-        
       ],
     },
 
